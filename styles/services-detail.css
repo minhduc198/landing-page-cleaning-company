@@ -1,0 +1,269 @@
+.reels {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 72px;
+  margin-top: 150.23px;
+}
+
+.reel-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+}
+
+.cir-active {
+  width: 240px;
+  height: 240px;
+  border-radius: 100%;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.cir-active img {
+  display: inline-block;
+  object-fit: cover;
+  border-radius: inherit;
+  width: 224.71px;
+  height: 224.71px;
+  z-index: 1;
+  border: 10px solid var(--color-white);
+}
+
+.cir-active::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-white-50);
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.cir-active::after {
+  content: "";
+  width: 100%;
+  height: 0;
+  background-color: var(--color-orange-200);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  transition: all 0.3s linear;
+}
+
+.cir-active:hover::after {
+  height: 100%;
+}
+
+.service-detail {
+  margin-top: 150px;
+  display: flex;
+  align-items: start;
+  gap: 128.67px;
+}
+
+.picture-cleaning-service {
+  position: relative;
+  inset: 0;
+}
+
+.picture-cleaning {
+  object-fit: cover;
+  width: 623px;
+  height: 569px;
+}
+
+.picture-cleaning-title {
+  padding-inline: 29.37px;
+  padding-block: 40px;
+  position: absolute;
+  right: -63.56px;
+  bottom: -56px;
+  z-index: 10;
+  width: 364px;
+  height: 268px;
+  background-color: var(--color-orange-100);
+}
+
+.picture-cleaning-title p:first-child {
+  color: var(--color-white);
+  font-weight: 700;
+}
+
+.picture-cleaning-title img {
+  margin-top: 49.7px;
+}
+
+.picture-cleaning-title p:last-child {
+  color: var(--color-white);
+  font-weight: 500;
+  margin-top: 16px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.details p {
+  color: var(--color-blue-200);
+}
+
+.statement-detail {
+  font-weight: 700;
+  margin-top: 28.84px;
+}
+
+.statement-full {
+  display: "inline-block" !important;
+  overflow: "visible" !important;
+}
+
+.statement {
+  color: var(--color-grey);
+  margin-top: 14.42px;
+  -webkit-line-clamp: 3;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.title-detail {
+  color: var(--color-grey);
+  margin-top: 28.84px;
+  font-weight: 400;
+}
+
+.button-readmore {
+  margin-top: 35px;
+  padding: 18px 47px;
+  border-radius: 30px;
+  cursor: pointer;
+  color: var(--color-white);
+  background-color: var(--color-orange-200);
+  transition: all 0.6s ease;
+}
+
+.button-readmore:hover {
+  box-shadow: 1px 1px 10px var(--color-orange-100);
+}
+
+.button-show-less {
+  margin-top: 35px;
+  padding: 18px 47px;
+  border-radius: 30px;
+  cursor: pointer;
+  color: var(--color-white);
+  background-color: var(--color-orange-200);
+  transition: all 0.6s ease;
+}
+
+.button-show-less:hover {
+  box-shadow: 1px 1px 10px var(--color-orange-100);
+}
+
+@media screen and (max-width: 576px) {
+  .services-section {
+    margin-top: -30px;
+  }
+
+  .reels {
+    gap: 15px;
+  }
+
+  .cir-active {
+    width: 120px;
+    height: 120px;
+  }
+
+  .cir-active img {
+    border: 5px solid var(--color-white);
+    width: 110px;
+    height: 110px;
+  }
+
+  .reel-item {
+    gap: 18px;
+  }
+
+  .reel-item p {
+    font-size: 12px;
+  }
+
+  .service-detail {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+  }
+
+  .picture-cleaning {
+    width: 300px;
+    height: 250px;
+  }
+
+  .picture-cleaning-title {
+    padding-inline: 10px;
+    padding-block: 8px;
+    right: -30px;
+    bottom: -20px;
+    width: 180px;
+    height: 120px;
+  }
+
+  .picture-cleaning-title p:first-child {
+    font-size: 8px;
+  }
+
+  .picture-cleaning-title img {
+    margin-top: 2px;
+    height: 3px;
+  }
+
+  .picture-cleaning-title p:last-child {
+    font-size: 12px;
+  }
+
+  .details p {
+    font-size: 30px;
+    line-height: normal;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .services-section {
+  }
+
+  .reels {
+    gap: 6px;
+    margin-top: 90px;
+  }
+
+  .cir-active {
+    width: 82px;
+    height: 82px;
+  }
+
+  .cir-active img {
+    border: 2px solid var(--color-white);
+    width: 78px;
+    height: 78px;
+  }
+
+  .reel-item {
+    gap: 5px;
+  }
+
+  .reel-item p {
+    font-size: 8px;
+  }
+}
