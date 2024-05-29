@@ -1,6 +1,5 @@
 .cc-cleaning-container {
   max-width: 1920px;
-  height: 969.3px;
   background-color: var(--color-white-50);
   margin: 150.66px auto 0;
   padding: 127.3px 299.86px 151.44px;
@@ -81,4 +80,28 @@
 
 .button-card:hover {
   background-color: rgb(248, 172, 33);
+}
+
+@media screen and (max-width: 576px) {
+  .cc-cleaning-container {
+    margin: 80px auto 0;
+
+    padding: 30px 20px 40px 20px;
+  }
+
+  .cc-cleaning-container h2 {
+    font-size: 30px;
+  }
+
+  .title-cc {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+
+  .cc-card {
+    margin-top: 63.21px;
+    display: flex;
+    flex-direction: column;
+    gap: 29.18px;
+  }
 }

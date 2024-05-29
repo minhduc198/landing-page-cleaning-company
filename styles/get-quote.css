@@ -11,9 +11,6 @@
   gap: 173.88px;
 }
 
-.circle {
-}
-
 .number {
   display: flex;
   justify-content: center;
@@ -116,4 +113,70 @@
 
 .phone-number:hover {
   box-shadow: 1px 1px 10px var(--color-orange-100);
+}
+
+@media screen and (max-width: 576px) {
+  .get-quote h2 {
+    margin-top: 60px;
+    font-size: 30px;
+  }
+
+  .circle-quote {
+    margin-top: 40px;
+    gap: 6px;
+  }
+
+  .number {
+    width: 78px;
+    height: 78px;
+    border: 2px solid var(--color-white);
+    font-size: 30px;
+  }
+
+  .num-circle {
+    width: 82px;
+    height: 82px;
+  }
+
+  .title-circle {
+    width: 100px;
+    margin-top: 25px;
+    font-size: 12px;
+  }
+
+  .get-impressive {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 50.66px;
+  }
+
+  .get-impressive img {
+    width: 100%;
+    height: 250px;
+  }
+
+  .title-impressive {
+    font-size: 30px;
+    line-height: normal;
+    margin-bottom: 28px;
+  }
+
+  .desc-impressive {
+    font-size: 20px;
+  }
+
+  .call-us {
+    margin-top: 30px;
+    gap: 26.95px;
+  }
+
+  .call-us p {
+    font-size: 18px;
+  }
+
+  .phone-number {
+    padding: 15px 10px;
+    font-size: 18px;
+  }
 }

@@ -13,3 +13,9 @@ btnReadMore.addEventListener("click", () => {
     btnReadMore.textContent = "Show more";
   }
 });
+
+const hamburgerMenu = document.querySelector(".hamburger-menu");
+
+hamburgerMenu.addEventListener("click", () => {
+  hamburgerMenu.classList.toggle("change");
+});
