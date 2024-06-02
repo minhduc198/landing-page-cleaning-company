@@ -15,7 +15,23 @@ btnReadMore.addEventListener("click", () => {
 });
 
 const hamburgerMenu = document.querySelector(".hamburger-menu");
+const navMenu = document.querySelector(".header-menu");
 
 hamburgerMenu.addEventListener("click", () => {
   hamburgerMenu.classList.toggle("change");
+  navMenu.classList.toggle("menu-active");
 });
+
+// const navHeader = document.querySelector(".nav-header");
+// const headerIntro = document.querySelector(".header-introduce");
+// window.addEventListener("scroll", function () {
+//   const currentScrollTop = window.pageYOffset;
+
+//   if (currentScrollTop > 0) {
+//     navHeader.classList.add("nav-header--fixed");
+//     navHeader.classList.add("header-introduce--hidden");
+//   } else {
+//     navHeader.classList.remove("nav-header--fixed");
+//     headerIntro.classList.remove("header-introduce--hidden");
+//   }
+// });
