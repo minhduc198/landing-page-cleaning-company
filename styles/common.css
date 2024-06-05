@@ -90,6 +90,24 @@ html {
   font-size: 5rem;
 }
 
+@media screen and (max-width: 1440px) {
+  .container {
+    padding-inline: 100px;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .container {
+    padding-inline: 80px;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .container {
+    padding-inline: 50px;
+  }
+}
+
 @media screen and (max-width: 576px) {
   .container {
     padding-inline: 20px;

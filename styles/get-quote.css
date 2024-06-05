@@ -115,6 +115,33 @@
   box-shadow: 1px 1px 10px var(--color-orange-100);
 }
 
+@media screen and (max-width: 1025px) {
+  .circle-quote {
+    gap: 50px;
+  }
+
+  .number {
+    width: 202.57px;
+    height: 202.57px;
+  }
+
+  .num-circle {
+    width: 217.43px;
+    height: 217.43px;
+  }
+
+  .get-impressive {
+    gap: 50px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .get-impressive img {
+    width: 100%;
+    height: 488px;
+  }
+}
+
 @media screen and (max-width: 576px) {
   .get-quote h2 {
     margin-top: 60px;

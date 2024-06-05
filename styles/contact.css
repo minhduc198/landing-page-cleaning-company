@@ -110,6 +110,28 @@
   box-shadow: 1px 1px 10px rgb(248, 172, 33);
 }
 
+@media screen and (max-width: 1440px) {
+  .details-contact {
+    width: 50%;
+    padding: 100px;
+  }
+
+  .box-input {
+    width: 50%;
+    padding: 100px;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .details-contact {
+    padding: 80px;
+  }
+
+  .box-input {
+    padding: 80px;
+  }
+}
+
 @media screen and (max-width: 576px) {
   .contact {
     margin-top: 80px;
