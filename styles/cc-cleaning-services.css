@@ -21,35 +21,52 @@
   gap: 29.18px;
 }
 
-.service-front-card {
+.flip-card {
+  width: 100%;
   position: relative;
   inset: 0;
-  display: flex;
-  z-index: 2;
-  flex-direction: column;
-  flex: 1;
-  background-color: var(--color-white);
-  border-radius: 20px;
-  box-shadow: 1px 1px 10px rgb(203, 202, 202);
-  overflow: hidden;
+  z-index: 1;
+  perspective: 1000px;
+  transform-style: preserve-3d;
   transition: all 1s ease;
 }
 
-/* .service-front-card:hover {
-  transform-style: preserve-3d;
-  transform: rotateY(180deg);
+.service-front-card {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  border-radius: 20px;
+  box-shadow: 1px 1px 10px rgb(203, 202, 202);
+  overflow: hidden;
+  background-color: var(--color-white);
+  transition: all 1s ease;
   backface-visibility: hidden;
 }
 
-.service-front-card:hover::before {
-  content: initial;
-  background-color: green;
+.flip-card:hover .service-front-card {
+  /* backface-visibility: hidden; */
+  transform: rotateY(180deg);
+}
+.test {
+  transform: rotateY(180deg);
+}
+
+.service-back-card {
   position: absolute;
   inset: 0;
   z-index: -1;
-  transform: rotateY(90deg);
-  backface-visibility: visible;
-} */
+  border-radius: 20px;
+  background-color: var(--color-white);
+  transition: all 1s ease;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flip-card:hover .service-back-card {
+  transform: rotateY(180deg);
+}
 
 .service-front-card img {
   width: 100%;
@@ -102,10 +119,29 @@
   background-color: rgb(248, 172, 33);
 }
 
+@media screen and (max-width: 1900px) {
+  .cc-cleaning-container {
+    margin: 80px auto 0;
+    padding: 30px 200px 40px;
+  }
+}
+
+@media screen and (max-width: 1700px) {
+  .cc-cleaning-container {
+    padding-inline: 90px;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .cc-cleaning-container {
+    padding-inline: 70px;
+  }
+}
+
 @media screen and (max-width: 1440px) {
   .cc-cleaning-container {
     margin: 80px auto 0;
-    padding: 30px 20px 40px 20px;
+    /* padding-inline: auto; */
   }
 
   .cc-cleaning-container h2 {
@@ -113,8 +149,12 @@
   }
 
   .cc-card {
+    justify-content: center;
+    width: 100%;
     margin-top: 100px;
-    gap: 20px;
+    grid-gap: 40px;
+    display: grid;
+    grid-template-columns: 30% 30%;
   }
 }
 
@@ -129,11 +169,7 @@
   }
 
   .cc-card {
-    width: 100%;
-    margin-top: 100px;
-    grid-gap: 40px;
-    display: grid;
-    justify-content: center;
+    grid-gap: 20px;
     grid-template-columns: 40% 40%;
   }
 }
@@ -157,7 +193,5 @@
   .cc-card {
     margin-top: 63.21px;
     gap: 29.18px;
-    display: flex;
-    flex-direction: column;
   }
 }

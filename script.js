@@ -21,3 +21,11 @@ hamburgerMenu.addEventListener("click", () => {
   hamburgerMenu.classList.toggle("change");
   navMenu.classList.toggle("menu-active");
 });
+
+const flipCard = document.querySelector(".flip-card");
+const btnCard = document.querySelector(".button-card");
+
+btnCard.addEventListener("click", () => {
+  flipCard.classList.add("service-front-card");
+  flipCard.classList.add("service-back-card");
+});
