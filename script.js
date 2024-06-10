@@ -22,10 +22,37 @@ hamburgerMenu.addEventListener("click", () => {
   navMenu.classList.toggle("menu-active");
 });
 
-const flipCard = document.querySelector(".flip-card");
-const btnCard = document.querySelector(".button-card");
+const ccCard = document.querySelector(".cc-card");
+const btnCards = ccCard.querySelectorAll(".button-card");
 
-btnCard.addEventListener("click", () => {
-  flipCard.classList.add("service-front-card");
-  flipCard.classList.add("service-back-card");
+const contentCards = ccCard.querySelectorAll(".title-card");
+const contentBackCards = ccCard.querySelectorAll(".back-full-content");
+const frontCards = ccCard.querySelectorAll(".service-front-card");
+const backCards = ccCard.querySelectorAll(".service-back-card");
+
+function handleFlipCard(index) {
+  frontCards[index].classList.add("front-card-active");
+  backCards[index].classList.add("back-card-active");
+  contentBackCards[index].textContent = contentCards[index].textContent;
+}
+
+function handleRemoveFlipCard(index) {
+  frontCards[index].classList.remove("front-card-active");
+  backCards[index].classList.remove("back-card-active");
+}
+
+btnCards.forEach((element, index) => {
+  element.addEventListener("click", () => {
+    handleFlipCard(index);
+
+    btnCards.forEach((_, idx) => {
+      if (idx !== index) {
+        handleRemoveFlipCard(idx);
+      }
+    });
+  });
+});
+
+backCards.forEach((element, index) => {
+  element.addEventListener("click", () => handleRemoveFlipCard(index));
 });

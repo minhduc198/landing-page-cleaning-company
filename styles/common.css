@@ -96,6 +96,12 @@ html {
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .container {
+    padding-inline: 90px;
+  }
+}
+
 @media screen and (max-width: 1025px) {
   .container {
     padding-inline: 80px;
@@ -103,6 +109,12 @@ html {
 }
 
 @media screen and (max-width: 990px) {
+  .container {
+    padding-inline: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
   .container {
     padding-inline: 50px;
   }

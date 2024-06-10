@@ -43,11 +43,11 @@
   backface-visibility: hidden;
 }
 
-.flip-card:hover .service-front-card {
-  /* backface-visibility: hidden; */
+.service-front-card.front-card-active {
   transform: rotateY(180deg);
 }
-.test {
+
+.back-full-content {
   transform: rotateY(180deg);
 }
 
@@ -59,12 +59,10 @@
   background-color: var(--color-white);
   transition: all 1s ease;
   overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 40px 20px;
 }
 
-.flip-card:hover .service-back-card {
+.service-back-card.back-card-active {
   transform: rotateY(180deg);
 }
 
@@ -174,10 +172,16 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .cc-card {
+    grid-gap: 40px;
+    grid-template-columns: 55%;
+  }
+}
+
 @media screen and (max-width: 576px) {
   .cc-cleaning-container {
     margin: 80px auto 0;
-
     padding: 30px 20px 40px 20px;
   }
 
@@ -191,7 +195,31 @@
   }
 
   .cc-card {
-    margin-top: 63.21px;
-    gap: 29.18px;
+    grid-template-columns: 70%;
+  }
+
+  .button-card {
+    width: 45px;
+    height: 45px;
+  }
+
+  .button-card img {
+    width: 14.37px;
+    height: 16px;
+  }
+
+  .job-card {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .title-card {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .cc-card {
+    grid-template-columns: 95%;
   }
 }

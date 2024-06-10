@@ -132,7 +132,7 @@
   }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   .contact {
     margin-top: 80px;
     flex-direction: column;
@@ -140,6 +140,22 @@
 
   .details-contact {
     width: 100%;
+    padding: 40px 40px;
+  }
+
+  .box-input {
+    width: 100%;
+    padding: 40px 20px;
+  }
+
+  .contact-btn {
+    padding: 12px 38px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .details-contact {
     padding: 20px 20px;
   }
 
